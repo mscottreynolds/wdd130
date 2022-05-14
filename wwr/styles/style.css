@@ -92,6 +92,17 @@ footer a:hover {
     color: var(--accent1-color);
 }
 
+.button-box a {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    text-decoration: none;
+}
+
+.button-box a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color)
+}
+
 .msg {
     background-color: var(--accent1-color);
 }
