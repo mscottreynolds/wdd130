@@ -1,5 +1,6 @@
 
 /* Copied variables from site-plan-rafting.css. */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif&display=swap');
 
 :root {
     /* change the values below to your colors from your palette */
@@ -26,6 +27,14 @@
   
 body {
     background-color: var(--accent2-color);
+    font-family: var(--paragraph-font);
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
 }
 
 header {
@@ -40,7 +49,7 @@ nav a {
     text-align: center;
     color: var(--nav-link-color);
     text-decoration: none;
-
+    padding: 35px;
 }
 
 nav a:hover {
@@ -52,12 +61,23 @@ main section {
     text-align: center;
 }
 
+main section img {
+    box-sizing: border-box;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--headline-color-on-white);
+}
+  
 h4 {
     color: var(--primary-color);
 }
-
+ 
 footer {
     background-color: var(--primary-color);
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 
 footer h3 {
@@ -77,14 +97,25 @@ footer a:hover {
     color: var(--accent2-color)
 }
 
+footer .social img {
+    padding-top: 15px;
+}
+
 .home-title {
+    font-family: var(--heading-font);
     color: var(--primary-color);
+    font-size: 2em;
+    margin-top: 10px;
 }
 
 .book, .join {
     background-color: var(--accent1-color);
     color: var(--primary-color);
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .book:hover, .join:hover {
@@ -105,14 +136,19 @@ footer a:hover {
 
 .msg {
     background-color: var(--accent1-color);
+    line-height: 1.5em;
+    padding: 35px;
 }
 
 .msg h2 {
+    font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
 .msg p {
     color: var(--primary-color);
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 
 .button-box {
@@ -125,7 +161,17 @@ footer a:hover {
 
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
+
+.card-img {
+    border: 10px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
 
 #content {
     max-width: 1600px;
@@ -144,3 +190,8 @@ footer a:hover {
 #hero-img {
     width: 100%;
 }
+
+#logo_link {
+    padding-top: 5px;
+}
+
