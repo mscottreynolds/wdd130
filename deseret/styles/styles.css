@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Public+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Noto+Sans+Deseret&family=Public+Sans&display=swap');
 
 :root {
     --primary-color: #DEB887;
-    --secondary-color:#F5DEB3;
+    --secondary-color: #F5DEB3;
     --accent1-color: #396E94;
     --accent2-color: #800000;
 
@@ -25,10 +24,14 @@
 }
 
 body {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 4em;
+    padding: 1em;
     font-size: 18px;
+}
+
+#content {
+    background-color: rgba(240, 240, 240);
 }
 
 header {
@@ -47,24 +50,25 @@ header {
     align-items: center;
 }
 
-.logo-image {
+#logo-image {
     width: 120px;
 }
 
 nav {
     background-color: var(--nav-background-color);
-    line-height: 3em;
+    line-height: 1.2em;
     text-align: center;
     font-size: 1.2em;
     list-style-type: none;
     display: flex;
+    /* overflow: hidden; */
 }
 
 nav a {
-    padding: 1em;
-    min-width: 120px;
+    min-width: 100px;
     text-decoration: none;
     padding: 10px;
+    overflow: hidden;
 
 }
 
@@ -78,8 +82,27 @@ nav a:hover {
     background-color: var(--nav-hover-background-color);
 }
 
-#main-page-image {
+#hero {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     text-align: center;
+    align-items: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#hero-box {
+    grid-row: 1/4;
+    grid-column: 1/4;
+}
+
+#hero-text {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
 main {
@@ -89,8 +112,8 @@ main {
 
 main img {
     float: left;
-    margin: 5px;
-    /* border: 1px solid  #396E94; */
+    margin: 1em;
+    border: 1px solid #396E94;
     width: 75px;
 }
 
@@ -107,21 +130,50 @@ h6 {
 hr {
     height: 2px;
     margin: 0px;
-    /* margin: 35px 0; */
     background: var(--accent1-color);
 }
 
 p {
-    margin-top: 5px;
+    margin-top: 1em;
     font-family: var(--paragraph-font);
     color: var(--paragraph-color);
 }
 
 footer {
     display: grid;
-    grid-template-columns: 90% auto;
+    grid-template-columns: 15% 70% 15%;
     text-align: center;
-    font-size: smaller;
+    align-items: center;
+    font-size: small;
     background-color: var(--footer-background-color);
 }
 
+#footer-text {
+    grid-column: 2/3;
+}
+
+#footer-links {
+    grid-column: 3/4;
+}
+
+
+@media screen and (max-width: 650px) {
+
+    nav,
+    footer {
+        flex-direction: column;
+    }
+
+    nav a,
+    footer {
+        display: block;
+    }
+
+    #background {
+        display: none;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
+}

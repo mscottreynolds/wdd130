@@ -7,6 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deseret Alphabet Portal</title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
+    <style>
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + #content {
+            padding-top: 60px;
+        }
+        #content {
+            z-index: 10;
+        }
+    </style>
 </head>
 
 <body>
@@ -14,23 +29,29 @@
         <header>
             <div id="logo">
                 <a id="logo-link" href="index.html">
-                    <img class="logo-image" src="images/deseret_alphabet_logo.jpg" alt="Deseret Alphabet Logo">
+                    <img id="logo-image" src="images/deseret_alphabet_logo.jpg" alt="Deseret Alphabet Logo">
                 </a>
                 <h1>Deseret Alphabet Portal</h1>
             </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="history.html">History</a>
-                <a href="resources.html">Resources</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-            </nav>
+            <div id="navbar">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="history.html">History</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
         </header>
         <hr>
-        <div id="main-page-image">
-            <h2 class="page-title">The Deseret Alphabet Portal</h2>
-            <img class="main-page-image" src="images/Deseret_chart_in_Book_of_Mormon_1869_small.png"
-                alt="Deseret Alphabet Chart">
+        <div id="hero">
+            <div id="hero-box">
+                <img id="hero-image" src="images/Deseret_chart_in_Book_of_Mormon_1869_small.png"
+                    alt="Deseret Alphabet Chart">
+            </div>
+            <div id="hero-text">
+                <h2 class="page-title">The Deseret Alphabet Portal</h2>
+            </div>
         </div>
         <main>
             <div id="main-section-1">
@@ -61,22 +82,41 @@
                     lasting and reliable source for information on the Deseret Alphabet for many years to come.
                 </p>
             </div>
-            <div><p></p></div>
+            <div>
+                <p></p>
+            </div>
         </main>
         <hr>
         <footer>
-            <div id="disclaimer">
+            <div id="footer-text">
                 <p>This website is not an official publication of The Church of Jesus Christ of Latter-day Saints. The
                     views expressed here are the opinions of the authors and do not necessarily reflect the views of the
                     Church.</p>
                 <h4>Deseret Alphabet Portal &copy; 2005-2022, M. Scott Reynolds, All Rights Reserved</h4>
             </div>
-            <div>
-                <h4><a href="site-plan.html">Site Plan</a></h4>
-                <h4><a href="#">Contact</a></h4>    
+            <div id="footer-links">
+                <a href="site-plan.html">Site Plan</a>
+                | <a href="#">Contact</a>
             </div>
         </footer>
     </div>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky && navbar.offsetWidth > 650) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
 </body>
 
 </html>
