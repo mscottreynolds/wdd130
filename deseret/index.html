@@ -8,7 +8,6 @@
     <title>Deseret Alphabet Portal</title>
     <link type="text/css" rel="stylesheet" href="styles/styles.css">
     <style>
-
         .sticky {
             position: fixed;
             top: 0;
@@ -17,7 +16,21 @@
 
         .sticky + #content {
             padding-top: 60px;
+            z-index: inherit;
         }
+
+        #hero {
+            /* height: 100%; */
+            /* width: 100%; */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url("images/front_page_background.jpg");
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            /* position: relative; */
+        }
+
+
     </style>
 </head>
 
@@ -26,7 +39,7 @@
         <header>
             <div id="logo">
                 <a id="logo-link" href="index.html">
-                    <img id="logo-image" src="images/deseret_alphabet_logo.jpg" alt="Deseret Alphabet Logo">
+                     <img id="logo-image" src="images/deseret_alphabet_logo.jpg" alt="Deseret Alphabet Logo">
                 </a>
                 <h1>Deseret Alphabet Portal</h1>
             </div>
@@ -43,24 +56,29 @@
         <hr>
         <div id="hero">
             <div id="hero-box">
-                <img id="hero-image" src="images/Deseret_chart_in_Book_of_Mormon_1869_small.png"
-                    alt="Deseret Alphabet Chart">
+                <!-- <img src="images/front_page_background.jpg"> -->
             </div>
             <div id="hero-text">
-                <h2 class="page-title">The Deseret Alphabet Portal</h2>
+                <a href="images/Deseret_chart_in_Book_of_Mormon_1869.png">
+                    <h2 class="page-title">The Deseret Alphabet Portal</h2>
+                </a>
             </div>
         </div>
         <main>
             <div id="main-section-1">
-                <img class="section-image" src="images/382068018o-sm.jpg" alt="Coin with Deseret Alphabet lettering.">
+                <a href="images/382068018o-lg.jpg">
+                    <img class="section-image" src="images/382068018o-sm.jpg" alt="Coin with Deseret Alphabet lettering.">
+                </a>
                 <p>
                     The main purpose of the Deseret Alphabet Portal site is to introduce people to the Deseret Alphabet
                     and give them enough resources so they can learn more about it.
                 </p>
             </div>
             <div id="main-section-2">
-                <img class="section-image" src="images/first_book_coverfront.jpg"
+                <a href="images/first_book_coverfront_lg.png">
+                    <img class="section-image" src="images/first_book_coverfront.jpg"
                     alt="Front Covert Deseret Alphabet Book 1">
+                </a>
                 <p>
                     As more and more individuals become interested in the Deseret Alphabet, they will publish their work
                     on the internet. This site aims to provide links to these sites that are considered to be of worth
@@ -72,8 +90,10 @@
                 </p>
             </div>
             <div id="main-section-3">
-                <img class="section-image" src="images/second_book_coverfront.jpg"
-                    alt="Front Covert Deseret Alphabet Book 2">
+                <a href="images/second_book_coverfront_lg.png">
+                    <img class="section-image" src="images/second_book_coverfront.jpg"
+                        alt="Front Covert Deseret Alphabet Book 2">
+                </a>
                 <p>
                     This site, the Deseret Alphabet Portal, along with the domain DeseretAlphabet.org, aims to be a long
                     lasting and reliable source for information on the Deseret Alphabet for many years to come.
@@ -99,7 +119,7 @@
     </div>
     <script>
         window.onscroll = function () {
-            myFunction()
+            //myFunction()
         };
 
         var navbar = document.getElementById("navbar");
