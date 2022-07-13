@@ -125,11 +125,18 @@ main {
     grid-template-columns: auto;
 }
 
-main img {
+main .image-left {
     float: left;
     margin: 1em;
     border: 1px solid #396E94;
-    width: 75px;
+    width: 100px;
+}
+
+main .image-right {
+    float: right;
+    margin: 1em;
+    border: 1px solid #396E94;
+    width: 150px;
 }
 
 h1,
